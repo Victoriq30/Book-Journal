@@ -42,5 +42,10 @@ namespace project
             signIn.ShowDialog();
             this.Close();
         }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

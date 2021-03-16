@@ -40,6 +40,7 @@ namespace project
         {
             CreateBookForm createBookForm = new CreateBookForm();
             createBookForm.ShowDialog();
+            this.Close();
 
         }
 

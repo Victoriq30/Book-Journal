@@ -14,8 +14,6 @@ namespace project.Data
         public BookContext()
         {
 
-
-
         }
 
 

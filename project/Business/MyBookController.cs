@@ -33,12 +33,12 @@ namespace project.Business
 
 
 
-        public List<MyBook> GetAll()
+        public List<MyBook> GetAll(int userId)
         {
             var myBooks = new List<MyBook>();
             using (var context = new BookContext())
             {
-                myBooks = context.MyBooks.ToList();
+                myBooks = context.MyBooks.Where(mb=>mb.UserId==userId).ToList();
             }
             return myBooks;
         }

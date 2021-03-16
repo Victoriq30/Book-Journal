@@ -1,4 +1,5 @@
 ﻿using project.Business;
+using project.Common;
 using project.Data.Models;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,8 @@ namespace project
         private void MyBooks_Load(object sender, EventArgs e)
         {
             var myBookController = new MyBookController();
-            List<MyBook> myBooks = myBookController.GetAll();
+            var userId = Global.UserId;
+            List<MyBook> myBooks = myBookController.GetAll(userId);
             label1.Text = myBooks.Count() + "";
             int i = 0;
             foreach (var myBook in myBooks)
