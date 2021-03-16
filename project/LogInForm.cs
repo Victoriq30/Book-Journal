@@ -25,6 +25,7 @@ namespace project
             {
                 Form1 form = new Form1();
                 form.ShowDialog();
+                this.Close();
             }
             else
             {
@@ -36,6 +37,7 @@ namespace project
         {
             SignInForm signIn = new SignInForm();
             signIn.ShowDialog();
+            this.Close();
         }
     }
 }

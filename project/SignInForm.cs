@@ -31,8 +31,16 @@ namespace project
             userController.Add(newUser);
             LogInForm logIn = new LogInForm();
             logIn.ShowDialog();
+            this.Close();
 
 
+        }
+
+        private void btnLogIn_Click(object sender, EventArgs e)
+        {
+            LogInForm logIn = new LogInForm();
+            logIn.ShowDialog();
+            this.Close();
         }
     }
 }

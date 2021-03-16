@@ -40,6 +40,7 @@ namespace project
             this.txtAuthor = new System.Windows.Forms.TextBox();
             this.txtImageUrl = new System.Windows.Forms.TextBox();
             this.txtDescription = new System.Windows.Forms.TextBox();
+            this.btnClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCreate
@@ -133,11 +134,22 @@ namespace project
             this.txtDescription.Size = new System.Drawing.Size(223, 67);
             this.txtDescription.TabIndex = 10;
             // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(308, 362);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 11;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // CreateBookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.txtImageUrl);
             this.Controls.Add(this.txtAuthor);
@@ -169,5 +181,6 @@ namespace project
         private System.Windows.Forms.TextBox txtAuthor;
         private System.Windows.Forms.TextBox txtImageUrl;
         private System.Windows.Forms.TextBox txtDescription;
+        private System.Windows.Forms.Button btnClear;
     }
 }

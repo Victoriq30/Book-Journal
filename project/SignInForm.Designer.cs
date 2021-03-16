@@ -37,6 +37,7 @@ namespace project
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnLogIn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -106,11 +107,22 @@ namespace project
             this.label4.TabIndex = 7;
             this.label4.Text = "Sign in";
             // 
+            // btnLogIn
+            // 
+            this.btnLogIn.Location = new System.Drawing.Point(112, 269);
+            this.btnLogIn.Name = "btnLogIn";
+            this.btnLogIn.Size = new System.Drawing.Size(75, 23);
+            this.btnLogIn.TabIndex = 8;
+            this.btnLogIn.Text = "Log in";
+            this.btnLogIn.UseVisualStyleBackColor = true;
+            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
+            // 
             // SignInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 393);
+            this.Controls.Add(this.btnLogIn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
@@ -136,5 +148,6 @@ namespace project
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnLogIn;
     }
 }

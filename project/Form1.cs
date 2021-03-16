@@ -27,7 +27,7 @@ namespace project
 
         private void biographyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
@@ -44,34 +44,83 @@ namespace project
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+
             var bookController = new BookController();
             List<Book> books = bookController.GetAll();
-            label1.Text = books.Count()+"";
+            label1.Text = books.Count() + "";
             int i = 0;
             foreach (var book in books)
             {
+                var coeficientIndex = 170;
+
                 Label lblName = new Label();
                 lblName.Text = book.Name;
-                lblName.Location = new Point(30,i*100+30);
+                lblName.Location = new Point(160, i * coeficientIndex + 20);
                 lblName.Name = "lblName" + i;
+                lblName.Font = new Font("Arial", 10, FontStyle.Bold);
+                lblName.AutoSize = true;
+                
+
                 PictureBox pictureBox = new PictureBox();
-                pictureBox.Location = new Point(50, i * 40 + 30);
+                pictureBox.Location = new Point(5, i * coeficientIndex - 10);
                 var request = WebRequest.Create(book.ImageUrl);
                 using (var response = request.GetResponse())
                 using (var stream = response.GetResponseStream())
                 {
                     pictureBox.Image = Bitmap.FromStream(stream);
                 }
-                pictureBox.Width = 40;
-                pictureBox.Height = 40;
+                pictureBox.Width = 150;
+                pictureBox.Height = 150;
                 pictureBox.Name = "ptb" + i;
-                pictureBox.SizeMode = PictureBoxSizeMode.CenterImage;
+                pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+
+
+                Label lblAuthor = new Label();
+                lblAuthor.Text = "Author: " + book.Author;
+                lblAuthor.Location = new Point(160, i * coeficientIndex + 60);
+                lblAuthor.Name = "lblAuthor" + i;
+                lblAuthor.Font = new Font("Arial", 8);
+                lblAuthor.AutoSize = true;
+
+                Label lblGenre = new Label();
+                lblGenre.Text = "Genre: " + book.Genre;
+                lblGenre.Location = new Point(160, i * coeficientIndex + 80);
+                lblGenre.Name = "lblGenre" + i;
+                lblGenre.Font = new Font("Arial", 8);
+                lblGenre.AutoSize = true;
+
+                Label lblDescription = new Label();
+                lblDescription.Text = book.Description;
+                lblDescription.Location = new Point(160, i * coeficientIndex + 100);
+                lblDescription.Name = "lblDescription" + i;
+                lblDescription.Font = new Font("Arial", 8);
+                lblDescription.AutoSize = true;
+
+
                 i++;
-                this.Controls.Add(lblName);
-                this.Controls.Add(pictureBox);
-                
+                panel1.Controls.Add(lblName);
+                panel1.Controls.Add(pictureBox);
+                panel1.Controls.Add(lblAuthor);
+                panel1.Controls.Add(lblGenre);
+                panel1.Controls.Add(lblDescription);
+
+
+            }
+        }
+    
+
+            private void panel1_Paint(object sender, PaintEventArgs e)
+            {
+
+
+
+
             }
 
         }
     }
-}
+
+
+
+

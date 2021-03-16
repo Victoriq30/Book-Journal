@@ -35,5 +35,14 @@ namespace project
             
 
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtAuthor.Text = "";
+            txtDescription.Text = "";
+            txtGenre.Text = "";
+            txtImageUrl.Text = "";
+            txtName.Text = "";
+        }
     }
 }

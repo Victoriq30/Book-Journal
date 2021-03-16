@@ -171,12 +171,6 @@
   <ItemGroup>
     <Compile Include="Business\BookController.cs" />
     <Compile Include="Business\UserController.cs" />
-    <Compile Include="ByGenreForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ByGenreForm.Designer.cs">
-      <DependentUpon>ByGenreForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="CreateBookForm.cs">
       <SubType>Form</SubType>
     </Compile>
