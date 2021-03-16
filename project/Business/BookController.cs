@@ -51,5 +51,16 @@ namespace project.Business
                 context.SaveChanges();
             }
         }
+
+        public Book GetById(int id)
+        {
+            using (var context = new BookContext())
+            {
+                return context.Books
+                    .Where(mb => mb.Id == id)
+                    .FirstOrDefault();
+            }
+        }
+
     }
 }

@@ -30,7 +30,6 @@ namespace project
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.myBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,7 +42,6 @@ namespace project
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.homeToolStripMenuItem,
             this.myBooksToolStripMenuItem,
             this.createBookToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -52,17 +50,12 @@ namespace project
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // homeToolStripMenuItem
-            // 
-            this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
-            this.homeToolStripMenuItem.Text = "Home";
-            // 
             // myBooksToolStripMenuItem
             // 
             this.myBooksToolStripMenuItem.Name = "myBooksToolStripMenuItem";
             this.myBooksToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
             this.myBooksToolStripMenuItem.Text = "My books";
+            this.myBooksToolStripMenuItem.Click += new System.EventHandler(this.myBooksToolStripMenuItem_Click);
             // 
             // createBookToolStripMenuItem
             // 
@@ -121,7 +114,6 @@ namespace project
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem myBooksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createBookToolStripMenuItem;
         private System.Windows.Forms.Label label1;

@@ -1,4 +1,5 @@
 ﻿using project.Business;
+using project.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +24,8 @@ namespace project
             var userController = new UserController();
             if (userController.LogIn( txtUserName.Text,txtPassword.Text))
             {
+                Global.UserId = userController.GetUserId(txtUserName.Text);
+
                 Form1 form = new Form1();
                 form.ShowDialog();
                 this.Close();

@@ -1,5 +1,4 @@
 ﻿using project.Business;
-using project.Common;
 using project.Data.Models;
 using System;
 using System.Collections.Generic;
@@ -14,54 +13,36 @@ using System.Windows.Forms;
 
 namespace project
 {
-    public partial class Form1 : Form
+    public partial class MyBooks : Form
     {
-        public Form1()
+        public MyBooks()
         {
             InitializeComponent();
         }
 
-        private void byGenreToolStripMenuItem_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void biographyToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MyBooks_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void createBookToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CreateBookForm createBookForm = new CreateBookForm();
-            createBookForm.ShowDialog();
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-
-            var bookController = new BookController();
-            List<Book> books = bookController.GetAll();
-            label1.Text = books.Count() + "";
+            var myBookController = new MyBookController();
+            List<MyBook> myBooks = myBookController.GetAll();
+            label1.Text = myBooks.Count() + "";
             int i = 0;
-            foreach (var book in books)
+            foreach (var myBook in myBooks)
             {
                 var coeficientIndex = 170;
-
+                var bookConroller = new BookController();
+                var book = bookConroller.GetById(myBook.BookId);
                 Label lblName = new Label();
                 lblName.Text = book.Name;
                 lblName.Location = new Point(160, i * coeficientIndex + 20);
                 lblName.Name = "lblName" + i;
                 lblName.Font = new Font("Arial", 10, FontStyle.Bold);
                 lblName.AutoSize = true;
-                
+
 
                 PictureBox pictureBox = new PictureBox();
                 pictureBox.Location = new Point(5, i * coeficientIndex - 10);
@@ -74,9 +55,8 @@ namespace project
                 pictureBox.Width = 150;
                 pictureBox.Height = 150;
                 pictureBox.Name = "ptb" + i;
-                pictureBox.SizeMode = PictureBoxSizeMode.Zoom;                
-                pictureBox.AccessibleName = book.Id.ToString();
-                pictureBox.Click += new System.EventHandler(this.AddBookToMyBook);
+                pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+               
 
 
 
@@ -112,56 +92,5 @@ namespace project
 
             }
         }
-       
-
-
-  void AddBookToMyBook(object sender, EventArgs s)
-        {
-            
-            PictureBox pictureBox = (PictureBox)sender;
-            var bookId = int.Parse(pictureBox.AccessibleName);
-            var myBookController = new MyBookController();
-            var newMyBook = new MyBook()
-            {
-                
-                BookId = bookId,
-                UserId = Global.UserId,
-            }
-            ;
-
-
-            myBookController.Add(newMyBook);
-
-
-            MessageBox.Show("Successfull added!");
-
-        }
-        
-
-        
-
-
-
-
-
-
-            private void panel1_Paint(object sender, PaintEventArgs e)
-            {
-
-
-
-
-            }
-
-        private void myBooksToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MyBooks myBooks = new MyBooks();
-            myBooks.ShowDialog();
-            this.Close();
-        }
     }
-    }
-
-
-
-
+}

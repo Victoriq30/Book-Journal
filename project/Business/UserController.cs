@@ -25,6 +25,15 @@ namespace project.Business
                 return context.Users.Any(u => u.Username == username&&u.Password==password);
             }
         }
-
+        public int GetUserId(string username)
+        {
+            using (var context = new BookContext())
+            {
+                return context.Users
+                    .Where(u => u.Username == username)
+                    .FirstOrDefault()
+                    .Id;
+            }
+        }
     }
 }
