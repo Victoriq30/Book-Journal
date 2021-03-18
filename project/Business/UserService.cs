@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace project.Business
 {
-   public class UserController
+   public class UserService
     {
+       
         public void Add(User user)
         {
             using (var context = new BookContext())

@@ -40,15 +40,19 @@ namespace project
         {
             CreateBookForm createBookForm = new CreateBookForm();
             createBookForm.ShowDialog();
-            this.Close();
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            GetBooks();
+        }
 
+        private void GetBooks()
 
-            var bookController = new BookController();
+        {
+            panel1.Controls.Clear();
+            var bookController = new BookService();
             List<Book> books = bookController.GetAll();
             label1.Text = books.Count() + "";
             int i = 0;
@@ -62,7 +66,7 @@ namespace project
                 lblName.Name = "lblName" + i;
                 lblName.Font = new Font("Arial", 10, FontStyle.Bold);
                 lblName.AutoSize = true;
-                
+
 
                 PictureBox pictureBox = new PictureBox();
                 pictureBox.Location = new Point(5, i * coeficientIndex - 10);
@@ -75,9 +79,8 @@ namespace project
                 pictureBox.Width = 150;
                 pictureBox.Height = 150;
                 pictureBox.Name = "ptb" + i;
-                pictureBox.SizeMode = PictureBoxSizeMode.Zoom;                
-                pictureBox.AccessibleName = book.Id.ToString();
-                pictureBox.Click += new System.EventHandler(this.AddBookToMyBook);
+                pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+
 
 
 
@@ -102,26 +105,47 @@ namespace project
                 lblDescription.Font = new Font("Arial", 8);
                 lblDescription.AutoSize = true;
 
+                Button btn = new Button();
+                btn.Text = "Add to my books";
+                btn.Location = new Point(300, i * coeficientIndex + 20);
+                btn.Name = "btnAddToMyBook" + i;
+                btn.AccessibleName = book.Id.ToString();
+                btn.Click += new System.EventHandler(this.AddBookToMyBook);
+                btn.AutoSize = true;
 
+                Button btnDelete = new Button();
+                btnDelete.Text = "Remove book";
+                btnDelete.Location = new Point(450, i * coeficientIndex + 20);
+                btnDelete.Name = "btnDelete" + i;
+                btnDelete.AccessibleName = book.Id.ToString();
+                btnDelete.Click += new System.EventHandler(this.DeleteBook);
+                btnDelete.AutoSize = true;
+
+
+
+
+                //CounterOfBook
                 i++;
                 panel1.Controls.Add(lblName);
                 panel1.Controls.Add(pictureBox);
                 panel1.Controls.Add(lblAuthor);
                 panel1.Controls.Add(lblGenre);
                 panel1.Controls.Add(lblDescription);
+                panel1.Controls.Add(btn);
+                panel1.Controls.Add(btnDelete);
 
 
             }
         }
-       
 
 
-  void AddBookToMyBook(object sender, EventArgs s)
+
+        void AddBookToMyBook(object sender, EventArgs s)
         {
             
-            PictureBox pictureBox = (PictureBox)sender;
-            var bookId = int.Parse(pictureBox.AccessibleName);
-            var myBookController = new MyBookController();
+            Button btn = (Button)sender;
+            var bookId = int.Parse(btn.AccessibleName);
+            var myBookController = new MyBookService();
             var newMyBook = new MyBook()
             {
                 
@@ -137,16 +161,26 @@ namespace project
             MessageBox.Show("Successfull added!");
 
         }
-        
+        void DeleteBook(object sender, EventArgs s)
+        {
 
-        
+            Button btn = (Button)sender;
+            var bookId = int.Parse(btn.AccessibleName);
+            var bookController = new BookService();
+            bookController.Delete(bookId);         
+            MessageBox.Show("Successfull deleted!");
+
+        }
 
 
 
 
 
 
-            private void panel1_Paint(object sender, PaintEventArgs e)
+
+
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
             {
 
 
@@ -158,7 +192,11 @@ namespace project
         {
             MyBooks myBooks = new MyBooks();
             myBooks.ShowDialog();
-            this.Close();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            GetBooks();
         }
     }
     }

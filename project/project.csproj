@@ -169,9 +169,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business\BookController.cs" />
-    <Compile Include="Business\MyBookController.cs" />
-    <Compile Include="Business\UserController.cs" />
+    <Compile Include="Business\BookService.cs" />
+    <Compile Include="Business\MyBookService.cs" />
+    <Compile Include="Business\UserService.cs" />
     <Compile Include="Common\Global.cs" />
     <Compile Include="CreateBookForm.cs">
       <SubType>Form</SubType>

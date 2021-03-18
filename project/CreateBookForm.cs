@@ -21,7 +21,7 @@ namespace project
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            var bookController = new BookController();
+            var bookController = new BookService();
             var newBook = new Book()
             {
                 Name=txtName.Text,

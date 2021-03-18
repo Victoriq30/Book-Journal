@@ -35,6 +35,7 @@ namespace project
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,11 +92,22 @@ namespace project
             this.label2.TabIndex = 3;
             this.label2.Text = "Books count:";
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(647, 32);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(110, 34);
+            this.btnRefresh.TabIndex = 4;
+            this.btnRefresh.Text = "RefreshBooks";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(776, 505);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -119,6 +131,7 @@ namespace project
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }
 

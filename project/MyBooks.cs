@@ -28,7 +28,7 @@ namespace project
 
         private void MyBooks_Load(object sender, EventArgs e)
         {
-            var myBookController = new MyBookController();
+            var myBookController = new MyBookService();
             var userId = Global.UserId;
             List<MyBook> myBooks = myBookController.GetAll(userId);
             label1.Text = myBooks.Count() + "";
@@ -36,7 +36,7 @@ namespace project
             foreach (var myBook in myBooks)
             {
                 var coeficientIndex = 170;
-                var bookConroller = new BookController();
+                var bookConroller = new BookService();
                 var book = bookConroller.GetById(myBook.BookId);
                 Label lblName = new Label();
                 lblName.Text = book.Name;

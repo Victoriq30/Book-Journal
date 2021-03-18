@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace project.Business
 {
-  public  class MyBookController
+  public  class MyBookService
     {
         public void Add(MyBook myBook)
         {

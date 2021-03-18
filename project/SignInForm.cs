@@ -21,7 +21,7 @@ namespace project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var userController = new UserController();
+            var userController = new UserService();
             var newUser = new User() 
             {
                  Email=txtEmail.Text,
