@@ -10,5 +10,6 @@ namespace project.Common
     {
         public static int UserId { get; set; }
 
+
     }
 }
