@@ -14,9 +14,9 @@ using System.Windows.Forms;
 
 namespace project
 {
-    public partial class Form1 : Form
+    public partial class Home : Form
     {
-        public Form1()
+        public Home()
         {
             InitializeComponent();
         }
@@ -38,9 +38,10 @@ namespace project
 
         private void createBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CreateBookForm createBookForm = new CreateBookForm();
+            this.Hide();
+            AddBooksForm createBookForm = new AddBooksForm();
             createBookForm.ShowDialog();
-
+            this.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -82,8 +83,6 @@ namespace project
                 pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
 
 
-
-
                 Label lblAuthor = new Label();
                 lblAuthor.Text = "Author: " + book.Author;
                 lblAuthor.Location = new Point(160, i * coeficientIndex + 60);
@@ -122,8 +121,6 @@ namespace project
                 btnDelete.AutoSize = true;
 
 
-
-
                 //CounterOfBook
                 i++;
                 panel1.Controls.Add(lblName);
@@ -133,16 +130,11 @@ namespace project
                 panel1.Controls.Add(lblDescription);
                 panel1.Controls.Add(btn);
                 panel1.Controls.Add(btnDelete);
-
-
             }
         }
 
-
-
         void AddBookToMyBook(object sender, EventArgs s)
         {
-            
             Button btn = (Button)sender;
             var bookId = int.Parse(btn.AccessibleName);
             var myBookController = new MyBookService();
@@ -153,13 +145,8 @@ namespace project
                 UserId = Global.UserId,
             }
             ;
-
-
             myBookController.Add(newMyBook);
-
-
             MessageBox.Show("Successfull added!");
-
         }
         void DeleteBook(object sender, EventArgs s)
         {
@@ -172,26 +159,20 @@ namespace project
 
         }
 
-
-
-
-
-
-
-
-
         private void panel1_Paint(object sender, PaintEventArgs e)
-            {
+        {
 
 
 
 
-            }
+        }
 
         private void myBooksToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MyBooks myBooks = new MyBooks();
+            this.Hide();
+            MyBooksForm myBooks = new MyBooksForm();
             myBooks.ShowDialog();
+            this.Close();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -199,8 +180,4 @@ namespace project
             GetBooks();
         }
     }
-    }
-
-
-
-
+}

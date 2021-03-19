@@ -17,6 +17,8 @@ namespace project
         public LogInForm()
         {
             InitializeComponent();
+
+            lblInformation.Visible = false;
         }
 
         private void btnLogIn_Click(object sender, EventArgs e)
@@ -26,7 +28,8 @@ namespace project
             {
                 Global.UserId = userController.GetUserId(txtUserName.Text);
 
-                Form1 form = new Form1();
+                this.Hide();
+                Home form = new Home();
                 form.ShowDialog();
                 this.Close();
             }
@@ -38,9 +41,6 @@ namespace project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SignInForm signIn = new SignInForm();
-            signIn.ShowDialog();
-            this.Close();
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
@@ -52,5 +52,14 @@ namespace project
         {
 
         }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SignUpForm signIn = new SignUpForm();
+            signIn.ShowDialog();
+            this.Close();
+        }
+
     }
 }

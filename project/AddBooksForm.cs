@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace project
 {
-    public partial class CreateBookForm : Form
+    public partial class AddBooksForm : Form
     {
-        public CreateBookForm()
+        public AddBooksForm()
         {
             InitializeComponent();
         }
@@ -43,6 +43,27 @@ namespace project
             txtGenre.Text = "";
             txtImageUrl.Text = "";
             txtName.Text = "";
+        }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Home form = new Home();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void myBooksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MyBooksForm myBooks = new MyBooksForm();
+            myBooks.ShowDialog();
+            this.Close();
+        }
+
+        private void addBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

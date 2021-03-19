@@ -35,10 +35,10 @@ namespace project
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogIn = new System.Windows.Forms.Button();
-            this.btnSignIn = new System.Windows.Forms.Button();
             this.lblInformation = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnSignUp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,9 +51,9 @@ namespace project
             this.label1.Location = new System.Drawing.Point(174, 39);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 37);
+            this.label1.Size = new System.Drawing.Size(103, 37);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Log In";
+            this.label1.Text = "Log in";
             // 
             // label2
             // 
@@ -100,7 +100,7 @@ namespace project
             // btnLogIn
             // 
             this.btnLogIn.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogIn.Location = new System.Drawing.Point(196, 211);
+            this.btnLogIn.Location = new System.Drawing.Point(191, 210);
             this.btnLogIn.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogIn.Name = "btnLogIn";
             this.btnLogIn.Size = new System.Drawing.Size(75, 32);
@@ -109,28 +109,17 @@ namespace project
             this.btnLogIn.UseVisualStyleBackColor = true;
             this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
-            // btnSignIn
-            // 
-            this.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnSignIn.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignIn.Location = new System.Drawing.Point(260, 303);
-            this.btnSignIn.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSignIn.Name = "btnSignIn";
-            this.btnSignIn.Size = new System.Drawing.Size(70, 32);
-            this.btnSignIn.TabIndex = 7;
-            this.btnSignIn.Text = "Sign up";
-            this.btnSignIn.UseVisualStyleBackColor = true;
-            this.btnSignIn.Click += new System.EventHandler(this.button2_Click);
-            // 
             // lblInformation
             // 
             this.lblInformation.AutoSize = true;
-            this.lblInformation.Location = new System.Drawing.Point(180, 256);
+            this.lblInformation.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInformation.ForeColor = System.Drawing.Color.Red;
+            this.lblInformation.Location = new System.Drawing.Point(134, 256);
             this.lblInformation.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInformation.Name = "lblInformation";
-            this.lblInformation.Size = new System.Drawing.Size(97, 13);
+            this.lblInformation.Size = new System.Drawing.Size(175, 14);
             this.lblInformation.TabIndex = 8;
-            this.lblInformation.Text = "Incorrect password";
+            this.lblInformation.Text = "Incorrect username or password";
             // 
             // pictureBox1
             // 
@@ -152,15 +141,28 @@ namespace project
             this.label4.TabIndex = 10;
             this.label4.Text = "Don\'t have an account?";
             // 
+            // btnSignUp
+            // 
+            this.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnSignUp.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignUp.Location = new System.Drawing.Point(259, 303);
+            this.btnSignUp.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(70, 32);
+            this.btnSignUp.TabIndex = 11;
+            this.btnSignUp.Text = "Sign up";
+            this.btnSignUp.UseVisualStyleBackColor = true;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
+            // 
             // LogInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::project.Properties.Resources.photo_1557683316_973673baf926;
             this.ClientSize = new System.Drawing.Size(455, 370);
+            this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblInformation);
-            this.Controls.Add(this.btnSignIn);
             this.Controls.Add(this.btnLogIn);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUserName);
@@ -170,7 +172,7 @@ namespace project
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LogInForm";
-            this.Text = "LogInForm";
+            this.Text = "Log In";
             this.Load += new System.EventHandler(this.LogInForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -186,9 +188,9 @@ namespace project
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogIn;
-        private System.Windows.Forms.Button btnSignIn;
         private System.Windows.Forms.Label lblInformation;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnSignUp;
     }
 }

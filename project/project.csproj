@@ -180,11 +180,11 @@
     <Compile Include="Business\MyBookService.cs" />
     <Compile Include="Business\UserService.cs" />
     <Compile Include="Common\Global.cs" />
-    <Compile Include="CreateBookForm.cs">
+    <Compile Include="AddBooksForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateBookForm.Designer.cs">
-      <DependentUpon>CreateBookForm.cs</DependentUpon>
+    <Compile Include="AddBooksForm.Designer.cs">
+      <DependentUpon>AddBooksForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\Models\Book.cs" />
     <Compile Include="Data\BookContext.cs" />
@@ -212,11 +212,11 @@
       <DependentUpon>20210315144521_Initial1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\BookContextModelSnapshot.cs" />
-    <Compile Include="MyBooks.cs">
+    <Compile Include="MyBooksForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MyBooks.Designer.cs">
-      <DependentUpon>MyBooks.cs</DependentUpon>
+    <Compile Include="MyBooksForm.Designer.cs">
+      <DependentUpon>MyBooksForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -226,8 +226,8 @@
     <Compile Include="SignInForm.Designer.cs">
       <DependentUpon>SignInForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CreateBookForm.resx">
-      <DependentUpon>CreateBookForm.cs</DependentUpon>
+    <EmbeddedResource Include="AddBooksForm.resx">
+      <DependentUpon>AddBooksForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -235,8 +235,8 @@
     <EmbeddedResource Include="LogInForm.resx">
       <DependentUpon>LogInForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyBooks.resx">
-      <DependentUpon>MyBooks.cs</DependentUpon>
+    <EmbeddedResource Include="MyBooksForm.resx">
+      <DependentUpon>MyBooksForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

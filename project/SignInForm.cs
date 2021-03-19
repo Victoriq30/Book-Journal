@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace project
 {
-    public partial class SignInForm : Form
+    public partial class SignUpForm : Form
     {
-        public SignInForm()
+        public SignUpForm()
         {
             InitializeComponent();
         }
@@ -29,6 +29,8 @@ namespace project
                  Username=txtUsername.Text
             };
             userController.Add(newUser);
+
+            this.Hide();
             LogInForm logIn = new LogInForm();
             logIn.ShowDialog();
             this.Close();
@@ -38,6 +40,7 @@ namespace project
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
+            this.Hide();
             LogInForm logIn = new LogInForm();
             logIn.ShowDialog();
             this.Close();

@@ -14,9 +14,9 @@ using System.Windows.Forms;
 
 namespace project
 {
-    public partial class MyBooks : Form
+    public partial class MyBooksForm : Form
     {
-        public MyBooks()
+        public MyBooksForm()
         {
             InitializeComponent();
         }
@@ -93,6 +93,27 @@ namespace project
 
 
             }
+        }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Home form1 = new Home();
+            form1.ShowDialog();
+            this.Close();
+        }
+
+        private void myBooksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddBooksForm createBookForm = new AddBooksForm();
+            createBookForm.ShowDialog();
+            this.Close();
         }
     }
 }

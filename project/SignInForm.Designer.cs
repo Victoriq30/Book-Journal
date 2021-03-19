@@ -1,7 +1,7 @@
 ﻿
 namespace project
 {
-    partial class SignInForm
+    partial class SignUpForm
     {
         /// <summary>
         /// Required designer variable.
@@ -80,7 +80,7 @@ namespace project
             // 
             this.btnSignIn.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignIn.Location = new System.Drawing.Point(197, 220);
-            this.btnSignIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSignIn.Margin = new System.Windows.Forms.Padding(2);
             this.btnSignIn.Name = "btnSignIn";
             this.btnSignIn.Size = new System.Drawing.Size(70, 30);
             this.btnSignIn.TabIndex = 3;
@@ -91,7 +91,7 @@ namespace project
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(195, 115);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(152, 20);
             this.txtEmail.TabIndex = 4;
@@ -99,7 +99,7 @@ namespace project
             // txtUsername
             // 
             this.txtUsername.Location = new System.Drawing.Point(195, 150);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(127, 20);
             this.txtUsername.TabIndex = 5;
@@ -107,8 +107,9 @@ namespace project
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(195, 184);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(127, 20);
             this.txtPassword.TabIndex = 6;
             // 
@@ -129,7 +130,7 @@ namespace project
             // 
             this.btnLogIn.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogIn.Location = new System.Drawing.Point(272, 294);
-            this.btnLogIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogIn.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogIn.Name = "btnLogIn";
             this.btnLogIn.Size = new System.Drawing.Size(66, 32);
             this.btnLogIn.TabIndex = 8;
@@ -157,7 +158,7 @@ namespace project
             this.label5.TabIndex = 11;
             this.label5.Text = "Already have an account?";
             // 
-            // SignInForm
+            // SignUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -174,9 +175,9 @@ namespace project
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "SignInForm";
-            this.Text = "SignInForm";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "SignUpForm";
+            this.Text = "Sign up";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
