@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace project.Business
 {
-  public  class MyBookService
+    public  class MyBookService
     {
         public void Add(MyBook myBook)
         {
@@ -18,8 +18,6 @@ namespace project.Business
                 context.SaveChanges();
             }
         }
-
-
 
         public MyBook GetById(int id)
         {
@@ -31,8 +29,6 @@ namespace project.Business
             }
         }
 
-
-
         public List<MyBook> GetAll(int userId)
         {
             var myBooks = new List<MyBook>();
@@ -42,8 +38,6 @@ namespace project.Business
             }
             return myBooks;
         }
-
-
 
         public void Delete(int id)
         {

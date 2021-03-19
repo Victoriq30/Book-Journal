@@ -118,19 +118,61 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ad643eb27d3a4db9b0591" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ad643eb27d3a4db9b0591.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="изтеглен файл (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\изтеглен файл (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="png-clipart-background-books-border-book-background-thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-clipart-background-books-border-book-background-thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ThinkstockPhotos-696860774" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ThinkstockPhotos-696860774.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Steve_Jobs_by_Walter_Isaacson" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Steve_Jobs_by_Walter_Isaacson.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ad643eb27d3a4db9b059 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ad643eb27d3a4db9b059 (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ad643eb27d3a4db9b059 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ad643eb27d3a4db9b059 (3).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kisspng-computer-icons-user-clip-art-user-5abf13db5624e4.1771742215224718993529" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-computer-icons-user-clip-art-user-5abf13db5624e4.1771742215224718993529.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="photo-1557683316-973673baf926" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\photo-1557683316-973673baf926.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="91jj+OWbC1L" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\91jj+OWbC1L.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ad643eb27d3a4db9b059" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ad643eb27d3a4db9b059.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="row-books-shelf_23-2147845969" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\row-books-shelf_23-2147845969.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="изтеглен файл" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\изтеглен файл.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ad643eb27d3a4db9b059 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ad643eb27d3a4db9b059 (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="istockphoto-1126130554-170667a" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\istockphoto-1126130554-170667a.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="png-transparent-profile-user-icon-computer-icons-user-profile-head-ico-miscellaneous-black-desktop-wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-transparent-profile-user-icon-computer-icons-user-profile-head-ico-miscellaneous-black-desktop-wallpaper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="изтеглен файл (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\изтеглен файл (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="изтеглен файл (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\изтеглен файл (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Daco_5096621" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Daco_5096621.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ad643eb27d3a4db9b059 (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ad643eb27d3a4db9b059 (4).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

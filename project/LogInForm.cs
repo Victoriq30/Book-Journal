@@ -47,5 +47,10 @@ namespace project
         {
 
         }
+
+        private void LogInForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

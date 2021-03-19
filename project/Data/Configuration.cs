@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace project.Data
 {
-   public static class Configuration
+    public static class Configuration
     {
         public static string ConnectionString =
             "Server=(localdb)\\mssqllocaldb;Database=BookDiary;Trusted_Connection=True;";

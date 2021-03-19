@@ -10,8 +10,6 @@ namespace project.Business
 {
     public class BookService
     {
-        
-
         public void Add(Book book)
         {
             using (var context=new BookContext())
@@ -61,6 +59,5 @@ namespace project.Business
                     .FirstOrDefault();
             }
         }
-
     }
 }

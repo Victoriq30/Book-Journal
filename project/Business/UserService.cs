@@ -8,9 +8,8 @@ using System.Threading.Tasks;
 
 namespace project.Business
 {
-   public class UserService
+    public class UserService
     {
-       
         public void Add(User user)
         {
             using (var context = new BookContext())
@@ -19,6 +18,7 @@ namespace project.Business
                 context.SaveChanges();
             }
         }
+
         public bool LogIn(string username,string password)
         {
             using(var context=new BookContext())
@@ -26,6 +26,7 @@ namespace project.Business
                 return context.Users.Any(u => u.Username == username&&u.Password==password);
             }
         }
+
         public int GetUserId(string username)
         {
             using (var context = new BookContext())
