@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace project.Common
 {
-  public static  class Global
+    public static  class Global
+
+
     {
         public static int UserId { get; set; }
 
