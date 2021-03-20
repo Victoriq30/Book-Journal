@@ -21,14 +21,14 @@ namespace project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var userController = new UserService();
-            var newUser = new User() 
-            {
-                 Email=txtEmail.Text,
-                 Password=txtPassword.Text,
-                 Username=txtUsername.Text
-            };
-            userController.Add(newUser);
+            var userService = new UserService();
+            var newUser = new User();
+
+            newUser.Email = txtEmail.Text;
+            newUser.Password = txtPassword.Text;
+            newUser.Username = txtUsername.Text;
+            
+            userService.Add(newUser);
 
             this.Hide();
             LogInForm logIn = new LogInForm();
@@ -44,6 +44,11 @@ namespace project
             LogInForm logIn = new LogInForm();
             logIn.ShowDialog();
             this.Close();
+        }
+
+        private void SignUpForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

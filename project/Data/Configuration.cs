@@ -8,6 +8,6 @@ namespace project.Data
 {
     public static class Configuration
     {
-        public const string ConnectionString = "Server=.;Database=BookStore;Integrated Security = True";
+        public const string ConnectionString = "Server=(LocalDB)\\MSSQLLocalDB;Database=BookDiary;Integrated Security = True";
     }
 }

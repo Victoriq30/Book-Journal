@@ -17,7 +17,7 @@ namespace project
     public partial class Home : Form
     {
         public Home()
-        {
+        { 
             InitializeComponent();
         }
 
@@ -52,9 +52,9 @@ namespace project
         private void GetBooks()
 
         {
-            panel1.Controls.Clear();
-            var bookController = new BookService();
-            List<Book> books = bookController.GetAll();
+            panelAddedBooks.Controls.Clear();
+            var bookService = new BookService();
+            List<Book> books = bookService.GetAll();
             label1.Text = books.Count() + "";
             int i = 0;
             foreach (var book in books)
@@ -70,7 +70,7 @@ namespace project
 
 
                 PictureBox pictureBox = new PictureBox();
-                pictureBox.Location = new Point(5, i * coeficientIndex - 10);
+                pictureBox.Location = new Point(5, i * coeficientIndex +10);
                 var request = WebRequest.Create(book.ImageUrl);
                 using (var response = request.GetResponse())
                 using (var stream = response.GetResponseStream())
@@ -104,47 +104,48 @@ namespace project
                 lblDescription.Font = new Font("Arial", 8);
                 lblDescription.AutoSize = true;
 
-                Button btn = new Button();
-                btn.Text = "Add to my books";
-                btn.Location = new Point(300, i * coeficientIndex + 20);
-                btn.Name = "btnAddToMyBook" + i;
-                btn.AccessibleName = book.Id.ToString();
-                btn.Click += new System.EventHandler(this.AddBookToMyBook);
-                btn.AutoSize = true;
+                Button btnAddToMyBooks = new Button();
+                btnAddToMyBooks.Text = "Add to my books";
+                btnAddToMyBooks.Location = new Point(360, i * coeficientIndex + 20);
+                btnAddToMyBooks.Name = "btnAddToMyBook" + i;
+                btnAddToMyBooks.AccessibleName = book.Id.ToString();
+                btnAddToMyBooks.Click += new System.EventHandler(this.AddBookToMyBook);
+                btnAddToMyBooks.AutoSize = true;
+                btnAddToMyBooks.Font = new Font("Microsoft YaHei", 8);
+              
 
                 Button btnDelete = new Button();
                 btnDelete.Text = "Remove book";
-                btnDelete.Location = new Point(450, i * coeficientIndex + 20);
+                btnDelete.Location = new Point(480, i * coeficientIndex + 20);
                 btnDelete.Name = "btnDelete" + i;
                 btnDelete.AccessibleName = book.Id.ToString();
                 btnDelete.Click += new System.EventHandler(this.DeleteBook);
                 btnDelete.AutoSize = true;
+                btnDelete.Font = new Font("Microsoft YaHei", 8);
 
 
                 //CounterOfBook
                 i++;
-                panel1.Controls.Add(lblName);
-                panel1.Controls.Add(pictureBox);
-                panel1.Controls.Add(lblAuthor);
-                panel1.Controls.Add(lblGenre);
-                panel1.Controls.Add(lblDescription);
-                panel1.Controls.Add(btn);
-                panel1.Controls.Add(btnDelete);
+                panelAddedBooks.Controls.Add(lblName);
+                panelAddedBooks.Controls.Add(pictureBox);
+                panelAddedBooks.Controls.Add(lblAuthor);
+                panelAddedBooks.Controls.Add(lblGenre);
+                panelAddedBooks.Controls.Add(lblDescription);
+                panelAddedBooks.Controls.Add(btnAddToMyBooks);
+                panelAddedBooks.Controls.Add(btnDelete);
             }
         }
 
-        void AddBookToMyBook(object sender, EventArgs s)
+        public  void AddBookToMyBook(object sender, EventArgs s)
         {
             Button btn = (Button)sender;
             var bookId = int.Parse(btn.AccessibleName);
             var myBookController = new MyBookService();
-            var newMyBook = new MyBook()
-            {
-                
-                BookId = bookId,
-                UserId = Global.UserId,
-            }
-            ;
+            var newMyBook = new MyBook();
+            newMyBook.BookId = bookId;
+            newMyBook.UserId = Global.UserId;
+            
+            
             myBookController.Add(newMyBook);
             MessageBox.Show("Successfull added!");
         }

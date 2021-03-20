@@ -21,9 +21,9 @@ namespace project.Data
 
         }
 
-        public DbSet<Book> Books { get; set; }
-        public DbSet<MyBook> MyBooks { get; set; }
-        public DbSet<User> Users { get; set; }
+        public virtual DbSet<Book> Books { get; set; }
+        public virtual DbSet<MyBook> MyBooks { get; set; }
+        public virtual DbSet<User> Users { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

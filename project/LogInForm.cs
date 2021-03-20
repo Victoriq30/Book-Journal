@@ -23,10 +23,10 @@ namespace project
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            var userController = new UserService();
-            if (userController.LogIn( txtUserName.Text,txtPassword.Text))
+            var userService = new UserService();
+            if (userService.LogIn( txtUserName.Text,txtPassword.Text))
             {
-                Global.UserId = userController.GetUserId(txtUserName.Text);
+                Global.UserId = userService.GetUserId(txtUserName.Text);
 
                 this.Hide();
                 Home form = new Home();

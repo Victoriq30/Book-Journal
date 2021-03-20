@@ -1,21 +1,18 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Moq;
 using NUnit.Framework;
 using project.Business;
 using project.Data;
 using project.Data.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Project.Test
+namespace Project.Tests
 {
-    [TestFixture]
-    
-    public class UserServiceTest
+    public class Tests
     {
         [Test]
-        public void TestMethod1()
+        public void User()
         {
             var mockSet = new Mock<DbSet<User>>();
 
@@ -30,14 +27,14 @@ namespace Project.Test
         }
 
         [Test]
-        public void GetAllCustomers()
+        public void GetAllUsers()
         {
             var data = new List<User>
-{
-new User{ Id = 1, Username="Customer1", Email = "Email"},
-new User{ Id = 2, Username="Customer2", Email = "Email"},
-new User{ Id = 3, Username="Customer3", Email = "Email"},
-}.AsQueryable();
+                {
+                  new User{ Id = 1, Username="User1", Email = "Email"},
+                  new User{ Id = 2, Username="User2", Email = "Email"},
+                  new User{ Id = 3, Username="User3", Email = "Email"},
+                }.AsQueryable();
 
             var mockSet = new Mock<DbSet<User>>();
             mockSet.As<IQueryable<User>>().Setup(m => m.Provider).Returns(data.Provider);
@@ -48,14 +45,11 @@ new User{ Id = 3, Username="Customer3", Email = "Email"},
             var mockContext = new Mock<BookContext>();
             mockContext.Setup(m => m.Users).Returns(mockSet.Object);
 
-            var userName = "Customer1";
+            var userName = "User1";
             var service = new UserService(mockContext.Object);
-            var customersFound = service.GetUserId(userName);
+            var usersFound = service.GetUserId(userName);
 
-            Assert.AreEqual(1, customersFound);
+            Assert.AreEqual(1, usersFound);
         }
-
-
-
     }
 }

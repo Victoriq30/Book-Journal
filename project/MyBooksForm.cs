@@ -28,16 +28,22 @@ namespace project
 
         private void MyBooks_Load(object sender, EventArgs e)
         {
-            var myBookController = new MyBookService();
+            GetMyBooks();
+        }
+
+        private void GetMyBooks()
+        {
+            panelMyBooks.Controls.Clear();
+            var myBookService = new MyBookService();
             var userId = Global.UserId;
-            List<MyBook> myBooks = myBookController.GetAll(userId);
+            List<MyBook> myBooks = myBookService.GetAll(userId);
             label1.Text = myBooks.Count() + "";
             int i = 0;
             foreach (var myBook in myBooks)
             {
                 var coeficientIndex = 170;
-                var bookConroller = new BookService();
-                var book = bookConroller.GetById(myBook.BookId);
+                var bookService = new BookService();
+                var book = bookService.GetById(myBook.BookId);
                 Label lblName = new Label();
                 lblName.Text = book.Name;
                 lblName.Location = new Point(160, i * coeficientIndex + 20);
@@ -47,7 +53,7 @@ namespace project
 
 
                 PictureBox pictureBox = new PictureBox();
-                pictureBox.Location = new Point(5, i * coeficientIndex - 10);
+                pictureBox.Location = new Point(5, i * coeficientIndex + 10);
                 var request = WebRequest.Create(book.ImageUrl);
                 using (var response = request.GetResponse())
                 using (var stream = response.GetResponseStream())
@@ -58,7 +64,7 @@ namespace project
                 pictureBox.Height = 150;
                 pictureBox.Name = "ptb" + i;
                 pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
-               
+
 
 
 
@@ -83,13 +89,23 @@ namespace project
                 lblDescription.Font = new Font("Arial", 8);
                 lblDescription.AutoSize = true;
 
+                Button btnDelete = new Button();
+                btnDelete.Text = "Remove book";
+                btnDelete.Location = new Point(480, i * coeficientIndex + 20);
+                btnDelete.Name = "btnDelete" + i;
+                btnDelete.AccessibleName = myBook.Id.ToString();
+                btnDelete.Click += new System.EventHandler(this.DeleteBook);
+                btnDelete.AutoSize = true;
+                btnDelete.Font = new Font("Microsoft YaHei", 8);
+
 
                 i++;
-                panel1.Controls.Add(lblName);
-                panel1.Controls.Add(pictureBox);
-                panel1.Controls.Add(lblAuthor);
-                panel1.Controls.Add(lblGenre);
-                panel1.Controls.Add(lblDescription);
+                panelMyBooks.Controls.Add(lblName);
+                panelMyBooks.Controls.Add(pictureBox);
+                panelMyBooks.Controls.Add(lblAuthor);
+                panelMyBooks.Controls.Add(lblGenre);
+                panelMyBooks.Controls.Add(lblDescription);
+                panelMyBooks.Controls.Add(btnDelete);
 
 
             }
@@ -114,6 +130,21 @@ namespace project
             AddBooksForm createBookForm = new AddBooksForm();
             createBookForm.ShowDialog();
             this.Close();
+        }
+        void DeleteBook(object sender, EventArgs s)
+        {
+
+            Button btn = (Button)sender;
+            var myBookId = int.Parse(btn.AccessibleName);
+            var myBookService = new MyBookService();
+            myBookService.Delete(myBookId);
+            MessageBox.Show("Successfull deleted!");
+
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            GetMyBooks();
         }
     }
 }

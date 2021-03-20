@@ -21,19 +21,16 @@ namespace project
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            var bookController = new BookService();
-            var newBook = new Book()
-            {
-                Name=txtName.Text,
-                Description=txtDescription.Text,
-                Genre=txtGenre.Text,
-                Author=txtAuthor.Text,
-                ImageUrl=txtImageUrl.Text
-                
-            };
-            bookController.Add(newBook);
-            
-
+            var bookService = new BookService();
+            var newBook = new Book();
+            newBook.Name = txtName.Text;
+            newBook.Description = txtDescription.Text;
+            newBook.Genre = txtGenre.Text;
+            newBook.Author = txtAuthor.Text;
+            newBook.ImageUrl = txtImageUrl.Text;
+                         
+            bookService.Add(newBook);
+            MessageBox.Show("Successfull added!");
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -62,6 +59,11 @@ namespace project
         }
 
         private void addBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddBooksForm_Load(object sender, EventArgs e)
         {
 
         }
