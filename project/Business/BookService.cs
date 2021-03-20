@@ -71,6 +71,7 @@ namespace project.Business
 
         public void Update(Book book,int id)
         {
+            
             using (context)
             {
                 var contextBook = context.Books.Find(id);
@@ -79,7 +80,9 @@ namespace project.Business
                 contextBook.Genre = book.Genre;
                 contextBook.ImageUrl = book.ImageUrl;
                 contextBook.Name = book.Name;
+             
                 context.Books.Update(book);
+                
                 context.SaveChanges();
             }
         }

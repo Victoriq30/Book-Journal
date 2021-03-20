@@ -163,8 +163,8 @@ namespace project
 
             Button btn = (Button)sender;
             var bookId = int.Parse(btn.AccessibleName);
-            var bookController = new BookService();
-            bookController.Delete(bookId);         
+            var bookService = new BookService();
+            bookService.Delete(bookId);         
             MessageBox.Show("Successfull deleted!");
 
         }
