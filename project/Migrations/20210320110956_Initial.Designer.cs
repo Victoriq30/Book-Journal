@@ -10,8 +10,8 @@ using project.Data;
 namespace project.Migrations
 {
     [DbContext(typeof(BookContext))]
-    [Migration("20210315144521_Initial1")]
-    partial class Initial1
+    [Migration("20210320110956_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

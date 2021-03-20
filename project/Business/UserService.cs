@@ -38,14 +38,14 @@ namespace project.Business
         }
         public bool LogIn(string username, string password)
         {
-            using (var context = new BookContext())
+            using (context)
             {
                 return context.Users.Any(u => u.Username == username && u.Password == password);
             }
         }
         public int GetUserId(string username)
         {
-            using (context)
+            using ( context)
             {
                 return context.Users
                     .Where(u => u.Username == username)

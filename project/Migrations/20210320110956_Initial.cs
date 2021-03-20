@@ -13,6 +13,7 @@ namespace project.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    Genre = table.Column<string>(nullable: true),
                     Name = table.Column<string>(nullable: true),
                     Author = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true),

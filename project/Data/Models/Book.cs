@@ -15,13 +15,16 @@ namespace project.Data.Models
         public string Description { get; set; }
         public string ImageUrl { get; set; }
 
+        /// <summary>
+        /// Create a new instance of the class with a new collection of my books.
+        /// </summary>
         public Book()
         {
             
             MyBooks = new HashSet<MyBook>();
         }
 
-        public virtual ICollection< MyBook> MyBooks { get; set; }
+        public virtual ICollection<MyBook> MyBooks { get; set; }
         public int MyBookId { get; set; }
     }
 }

@@ -140,13 +140,13 @@ namespace project
         {
             Button btn = (Button)sender;
             var bookId = int.Parse(btn.AccessibleName);
-            var myBookController = new MyBookService();
+            var myBookService = new MyBookService();
             var newMyBook = new MyBook();
             newMyBook.BookId = bookId;
             newMyBook.UserId = Global.UserId;
             
             
-            myBookController.Add(newMyBook);
+            myBookService.Add(newMyBook);
             MessageBox.Show("Successfull added!");
         }
         void DeleteBook(object sender, EventArgs s)

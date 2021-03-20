@@ -26,7 +26,9 @@ namespace project
             var userService = new UserService();
             if (userService.LogIn( txtUserName.Text,txtPassword.Text))
             {
-                Global.UserId = userService.GetUserId(txtUserName.Text);
+                var userService2 = new UserService();
+                
+                Global.UserId = userService2.GetUserId(txtUserName.Text);
 
                 this.Hide();
                 Home form = new Home();

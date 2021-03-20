@@ -10,9 +10,24 @@ namespace project.Business
 {
     public  class MyBookService
     {
+        private BookContext context;
+
+
+
+        public MyBookService()
+        {
+            this.context = new BookContext();
+        }
+
+
+
+        public MyBookService(BookContext bookContext)
+        {
+            this.context = bookContext;
+        }
         public void Add(MyBook myBook)
         {
-            using (var context = new BookContext())
+            using (context)
             {
                 context.MyBooks.Add(myBook);
                 context.SaveChanges();
@@ -21,7 +36,7 @@ namespace project.Business
 
         public MyBook GetById(int id)
         {
-            using (var context = new BookContext())
+            using (context)
             {
                 return context.MyBooks
                     .Where(mb => mb.Id == id)
@@ -32,7 +47,7 @@ namespace project.Business
         public List<MyBook> GetAll(int userId)
         {
             var myBooks = new List<MyBook>();
-            using (var context = new BookContext())
+            using (context)
             {
                 myBooks = context.MyBooks.Where(mb=>mb.UserId==userId).ToList();
             }
@@ -41,7 +56,7 @@ namespace project.Business
 
         public void Delete(int id)
         {
-            using (var context = new BookContext())
+            using (context)
             {
                 var myBook = context.MyBooks.Find(id);
                 context.Remove(myBook);

@@ -203,13 +203,9 @@
     <Compile Include="LogInForm.Designer.cs">
       <DependentUpon>LogInForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20210315143142_Initial.cs" />
-    <Compile Include="Migrations\20210315143142_Initial.designer.cs">
-      <DependentUpon>20210315143142_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20210315144521_Initial1.cs" />
-    <Compile Include="Migrations\20210315144521_Initial1.designer.cs">
-      <DependentUpon>20210315144521_Initial1.cs</DependentUpon>
+    <Compile Include="Migrations\20210320110956_Initial.cs" />
+    <Compile Include="Migrations\20210320110956_Initial.designer.cs">
+      <DependentUpon>20210320110956_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\BookContextModelSnapshot.cs" />
     <Compile Include="MyBooksForm.cs">
