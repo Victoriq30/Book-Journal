@@ -50,7 +50,7 @@ namespace project
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(833, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(971, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -59,8 +59,9 @@ namespace project
             this.homeToolStripMenuItem.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homeToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(69, 23);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
             this.homeToolStripMenuItem.Text = "Home";
+            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // myBooksToolStripMenuItem
             // 
@@ -99,7 +100,7 @@ namespace project
             this.panelAddedBooks.Location = new System.Drawing.Point(29, 80);
             this.panelAddedBooks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelAddedBooks.Name = "panelAddedBooks";
-            this.panelAddedBooks.Size = new System.Drawing.Size(773, 462);
+            this.panelAddedBooks.Size = new System.Drawing.Size(930, 462);
             this.panelAddedBooks.TabIndex = 2;
             this.panelAddedBooks.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -133,7 +134,7 @@ namespace project
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::project.Properties.Resources.ad643eb27d3a4db9b059__1_;
-            this.ClientSize = new System.Drawing.Size(833, 565);
+            this.ClientSize = new System.Drawing.Size(971, 565);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.panelAddedBooks);

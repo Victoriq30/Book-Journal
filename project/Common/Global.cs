@@ -9,5 +9,6 @@ namespace project.Common
     public static  class Global
     {
         public static int UserId { get; set; }
+        public static int EditBookId { get; set; }
     }
 }

@@ -74,6 +74,10 @@ namespace project.Business
             using (context)
             {
                 var contextBook = context.Books.Find(id);
+                contextBook.Author = book.Author;
+                contextBook.Description = book.Description;
+                contextBook.Genre = book.Genre;
+                contextBook.ImageUrl = book.ImageUrl;
                 contextBook.Name = book.Name;
                 context.Books.Update(book);
                 context.SaveChanges();

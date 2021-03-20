@@ -106,7 +106,7 @@ namespace project
 
                 Button btnAddToMyBooks = new Button();
                 btnAddToMyBooks.Text = "Add to my books";
-                btnAddToMyBooks.Location = new Point(360, i * coeficientIndex + 20);
+                btnAddToMyBooks.Location = new Point(390, i * coeficientIndex + 20);
                 btnAddToMyBooks.Name = "btnAddToMyBook" + i;
                 btnAddToMyBooks.AccessibleName = book.Id.ToString();
                 btnAddToMyBooks.Click += new System.EventHandler(this.AddBookToMyBook);
@@ -116,13 +116,21 @@ namespace project
 
                 Button btnDelete = new Button();
                 btnDelete.Text = "Remove book";
-                btnDelete.Location = new Point(480, i * coeficientIndex + 20);
+                btnDelete.Location = new Point(505, i * coeficientIndex + 20);
                 btnDelete.Name = "btnDelete" + i;
                 btnDelete.AccessibleName = book.Id.ToString();
                 btnDelete.Click += new System.EventHandler(this.DeleteBook);
                 btnDelete.AutoSize = true;
                 btnDelete.Font = new Font("Microsoft YaHei", 8);
 
+                Button btnEdit = new Button();
+                btnEdit.Text = "Edit book";
+                btnEdit.Location = new Point(600, i * coeficientIndex + 20);
+                btnEdit.Name = "btnEdit" + i;
+                btnEdit.AccessibleName = book.Id.ToString();
+                btnEdit.Click += new System.EventHandler(this.EditBook);
+                btnEdit.AutoSize = true;
+                btnEdit.Font = new Font("Microsoft YaHei", 8);
 
                 //CounterOfBook
                 i++;
@@ -133,6 +141,7 @@ namespace project
                 panelAddedBooks.Controls.Add(lblDescription);
                 panelAddedBooks.Controls.Add(btnAddToMyBooks);
                 panelAddedBooks.Controls.Add(btnDelete);
+                panelAddedBooks.Controls.Add(btnEdit);
             }
         }
 
@@ -159,6 +168,17 @@ namespace project
             MessageBox.Show("Successfull deleted!");
 
         }
+        void EditBook(object sender, EventArgs s)
+        {
+
+            Button btn = (Button)sender;
+            Global.EditBookId = int.Parse(btn.AccessibleName);    
+            this.Hide();
+            EditBookForm editBook = new EditBookForm();
+            editBook.ShowDialog();
+            this.Close();
+
+        }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -179,6 +199,11 @@ namespace project
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             GetBooks();
+        }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
