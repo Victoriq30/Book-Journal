@@ -13,7 +13,7 @@ namespace project.Data.Models
 
         public MyBook()
         {
-            
+            this.CreatedOn = DateTime.UtcNow;
         }
 
         public virtual Book Book { get; set; }
